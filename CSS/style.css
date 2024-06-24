@@ -1,40 +1,21 @@
 
-p {
-color: #0000ff;
+.spring::before {
+  content: 🌼;
+  margin-right: 5px; /* добавим отступ между маркером и текстом */
 }
-span{
-    color:red;
+
+.summer::before {
+  content: ☀️;
+  margin-right: 5px;
 }
-#name{
-    color:black;
+
+.autumn::before {
+  content: ☔️;
+  margin-right: 5px;
 }
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  p {
-    color: #555;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  .section {
-    margin-bottom: 20px;
-  }
+
+.winter{
+  background-color: blue;
+  color: white;
+  list-style-image: "❄️";
+}
