@@ -1,21 +1,149 @@
 
-.spring::before {
-  content: 🌼;
-  margin-right: 5px; /* добавим отступ между маркером и текстом */
+body {
+  background-image: url('https://img.freepik.com/free-vector/cyber-technology-background_23-2148390330.jpg?size=626&ext=jpg&ga=GA1.1.1536040264.1719612653&semt=ais_user');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Verdana, sans-serif;;
+  margin: 1rem;
+  padding: 0;
 }
 
-.summer::before {
-  content: ☀️;
-  margin-right: 5px;
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 
-.autumn::before {
-  content: ☔️;
-  margin-right: 5px;
+.about, .skills{
+  margin: 2rem;
 }
 
-.winter{
-  background-color: blue;
-  color: white;
-  list-style-image: "❄️";
+.about h2, .skills h2 {
+  border-bottom: 1px dashed #333;
+}
+
+.text { font-size: 36px; 
+  font-weight: bold; 
+  font-style: normal;
+  font-family: Arial, Verdana, sans-serif; 
+  text-shadow: 5px 4px 3px #999;
+  text-align: center; 
+  animation: outline 2s infinite linear; }
+  @keyframes outline { 
+  0% { -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: white; }
+  50% { -webkit-text-stroke-width: 3px; -webkit-text-stroke-color: red; } 
+  100% { -webkit-text-stroke-width: 1px; -webkit-text-stroke-color:whitesmoke; } }
+
+  .star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 0, 4);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: starMove 10s linear infinite;
+}
+
+@keyframes starMove {
+    0%, 100% {
+    top: 50%;
+    left: 50%;
+}
+25% {
+    top: 30%;
+    left: 50%;
+}
+50% {
+    top: 20%;
+    left: 20%;
+}
+75% {
+    top: 70%;
+    left: 80%;
+}
+}
+table {
+  margin: 50px 50px;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  border: 1px solid #666;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+a:link { color: blue; text-decoration: none; }
+
+a:visited { color: pink; text-decoration: none; }
+
+a:hover { color: rgb(255, 0, 8); text-decoration: underline; }
+
+a:active { color: yellow; text-decoration: underline; }
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.quality {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.quality:hover {
+  transform: scale(1.1);
+}
+
+.quality::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.quality:hover::before {
+  opacity: 1;
+}
+
+.quality-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.checkbox-container {
+display: inline-block;
+position: relative;
+width: 20px;
+height: 20px;
+}
+
+.checkbox {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 30px;
+color: red;
+opacity: 1;
+transition: transform 0.3s, opacity 0.3s;
+}
+
+.checkbox-container:hover .checkbox {
+transform: translate(-50%, -50%) scale(2);
+opacity: 1;
 }
